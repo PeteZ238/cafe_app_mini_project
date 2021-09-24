@@ -1,4 +1,4 @@
-from print_statements import *
+from modules.print_statements import *
 
 class App:
     def __init__(self):
