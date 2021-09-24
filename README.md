@@ -21,3 +21,6 @@ You will be building a program that runs on the command line interface (CLI).
 *   It should display a menu of options, some may be nested.
 *   There should be the option to exit / return to main menu.
 *   It should handle invlaid input.
+
+## Future Improvements
+*   Add error catching in the add, update and delete methods to handle duplicate and incorrect inputs gracefully rather than crashing.
