@@ -23,10 +23,7 @@ You will be building a program that runs on the command line interface (CLI).
 *   It should handle invlaid input.
 
 ## Future Improvements
-*   Add error catching in the add, update and delete methods to handle duplicate and incorrect inputs gracefully rather than crashing.
-*   ~~Add docstrings in all methods explaining what each does.~~
-*   Replace while loops with methods that can be called as required rather than constantly "looping".
-*   Add an action confirmation method to supplement the add, update and delete methods.
-*   Add a follow-up on add, delete and update (i.e. do you want to add another product?)
-*   os.system(cls) to clear the terminal
-*   ~~Add a quit() command~~
+*   ~~Add error catching in the add, update and delete methods to handle duplicate and incorrect inputs gracefully rather than crashing.~~
+*   ~~Add an action confirmation method to supplement the add, update and delete methods.~~
+*   ~~Add a follow-up on add, delete and update (i.e. do you want to add another product?)~~
+*   ~~os.system(cls) to clear the terminal~~ The subproccess module was used instead as the os module has been deprecated.
