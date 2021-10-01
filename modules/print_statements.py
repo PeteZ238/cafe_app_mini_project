@@ -1,7 +1,8 @@
 main_menu_options = '''
 Please select number of option to continue:
 0: Exit App
-1: View Product Menu'''
+1: View Product Menu Options
+2: View Courier List Options'''
 
 exit_statement = '\n' + 'Thank you, app now exiting!'
 
@@ -16,6 +17,14 @@ Please select number of option to continue:
 2: Add product to the menu
 3: Update a product in the menu
 4: Delete a product from the menu'''
+
+courier_options = '''
+Please select number of option to continue:
+0: Return to main menu
+1: Print courier list
+2: Add courier to the list
+3: Update a courier in the list
+4: Delete a courier from the list'''
 
 input_statement = '\n' + 'What would you like to do? '
 

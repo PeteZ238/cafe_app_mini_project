@@ -23,4 +23,5 @@ You will be building a program that runs on the command line interface (CLI).
 *   It should handle invlaid input.
 
 ## Future Improvements
-*   
+*   Look into tail call optimisation and the methods calling into each other. While loops (hybrid of current and initial solution) might be a better solution for long term usage of the app.
+*   Change data persistence method from txt files to csv (Pandas dataframes?) 
