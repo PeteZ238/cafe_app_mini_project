@@ -117,5 +117,6 @@ dmypy.json
 personal_notes.md 
 
 # Output Files
-menu.txt
+products.txt
 couriers.txt
+orders.json

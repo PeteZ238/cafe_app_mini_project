@@ -24,4 +24,6 @@ You will be building a program that runs on the command line interface (CLI).
 
 ## Future Improvements
 *   Look into tail call optimisation and the methods calling into each other. While loops (hybrid of current and initial solution) might be a better solution for long term usage of the app.
-*   Change data persistence method from txt files to csv (Pandas dataframes?) 
+*   Change data persistence method from txt files to csv (Pandas dataframes?)
+*   Settings menu to allow customisation of the app (ie switch off action confirmation)
+*   Extend product order update to update individual items rather than wipe products and start from scratch
