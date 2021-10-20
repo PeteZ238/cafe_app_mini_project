@@ -16,3 +16,6 @@ def orders_init():
 def orders_update(orders):
     with open('data\orders.json', 'w+') as order_file:
         json.dump(orders, order_file, ensure_ascii = False, indent = 4)
+
+def dict_repr(input_dict: dict):
+    print(json.dumps(input_dict, ensure_ascii = False, indent = 4))
