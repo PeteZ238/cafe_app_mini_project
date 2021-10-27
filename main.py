@@ -1,6 +1,7 @@
 import modules.print_statements as print_statements
 import modules.support_functions as support_functions
 import file_handlers.sql_module as sql
+import file_handlers.csv_module as csv
 
 def main():
     '''Method that calls the main menu of the app.'''
@@ -53,7 +54,6 @@ def product_menu():
             return product_menu()
         elif product_menu_input == 4:
             support_functions.clear()
-            sql.retrieve_products_table()
             sql.delete_product()
             return product_menu()
         else:
@@ -101,16 +101,16 @@ def order_menu():
             print('Returning to main menu.')
             return main()
         elif order_menu_input == 1:
-            # Retrieve function here
+            sql.retrieve_orders_table()
             return order_menu()
         elif order_menu_input == 2:
             sql.insert_into_orders()
             return order_menu()
         elif order_menu_input == 3:
-            # Update function here
+            sql.update_order()
             return order_menu()
         elif order_menu_input == 4:
-            # Delete function here
+            sql.cancel_order()
             return order_menu()
         else:
             print(print_statements.error_statement)
@@ -130,28 +130,48 @@ def customer_menu():
             return main()
         elif customer_menu_input == 1:
             sql.retrieve_customers_table()
-            return order_menu()
+            return customer_menu()
         elif customer_menu_input == 2:
             sql.insert_into_customers()
-            return order_menu()
+            return customer_menu()
         elif customer_menu_input == 3:
             sql.update_customer()
-            return order_menu()
+            return customer_menu()
         elif customer_menu_input == 4:
             sql.delete_customer()
-            return order_menu()
+            return customer_menu()
         else:
             print(print_statements.error_statement)
-            return order_menu()
+            return customer_menu()
     except ValueError as err:
             support_functions.clear()
             print(print_statements.error_statement)
-            return product_menu()
+            return customer_menu()
 
 def settings_menu():
     '''Function that calls the settings menu of the app.'''
-    print('This functionality has not yet been implemented. Stay tuned!')
-    pass
+    print(print_statements.settings_menu_options)
+    try:
+        settings_menu_input = int(input(print_statements.input_statement))
+        if settings_menu_input == 0:
+            print('Returning to main menu.')
+            return main()
+        elif settings_menu_input == 1:
+            csv.import_products_from_csv()
+            return settings_menu()
+        elif settings_menu_input == 2:
+            csv.import_couriers_from_csv()
+            return settings_menu()
+        elif settings_menu_input == 3:
+            csv.import_customers_from_csv()
+            return settings_menu()
+        else:
+            print(print_statements.error_statement)
+            return settings_menu()
+    except ValueError as err:
+            support_functions.clear()
+            print(print_statements.error_statement)
+            return settings_menu()
 
 if __name__ == '__main__':
     main()
