@@ -1,0 +1,4 @@
+product_id,product_name,product_price,product_stock,is_deleted
+1,Croissant,0.75,12,0
+2,Pain au Chocolat,0.95,12,0
+3,Sausage Roll,1.2,12,0

@@ -1,0 +1,4 @@
+customer_id,customer_name,customer_address,customer_phone,is_deleted
+1,Jonathan,Piccadilly Circus,07775505500,0
+2,Adam,Birmingham,07775505500,0
+3,Kate,Knowle,07775505500,0
