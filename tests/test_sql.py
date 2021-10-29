@@ -622,7 +622,7 @@ def test_update_order_products_valid(mock_input: Mock):
     host = 'localhost'
     user = 'root'
     password = 'password'
-    connection = mysql.connect(host, user, password, 'test')
+    connection = mysql.connect(host = host, user = user, password = password, database = 'test')
     cursor = connection.cursor()
     query = 'SELECT * FROM order_products;'
     cursor.execute(query)

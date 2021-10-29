@@ -9,7 +9,7 @@ user = 'root'
 password = 'password'
 
 def create_test_environment(database):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -122,7 +122,7 @@ def create_test_environment(database):
     print('Test envvironment created!')
 
 def delete_test_environment(database):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -150,7 +150,7 @@ def delete_test_environment(database):
     print('Test environment deleted!')
 
 def retrieve_products_table(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -175,7 +175,7 @@ def retrieve_products_table(database = 'cafe_app'):
     return result
 
 def retrieve_couriers_table(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -200,7 +200,7 @@ def retrieve_couriers_table(database = 'cafe_app'):
     return result
 
 def retrieve_customers_table(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -225,7 +225,7 @@ def retrieve_customers_table(database = 'cafe_app'):
     return result
 
 def retrieve_order_status_table(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -248,7 +248,7 @@ def retrieve_order_status_table(database = 'cafe_app'):
     return result
 
 def retrieve_orders_table(database: str = 'cafe_app') -> list:
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -392,7 +392,7 @@ def retrieve_orders_table(database: str = 'cafe_app') -> list:
     return order_list
 
 def insert_into_products(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -419,7 +419,7 @@ def insert_into_products(database = 'cafe_app'):
     connection.close()
 
 def insert_into_couriers(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -441,7 +441,7 @@ def insert_into_couriers(database = 'cafe_app'):
     connection.close()
 
 def insert_into_customers(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -464,7 +464,7 @@ def insert_into_customers(database = 'cafe_app'):
     connection.close()
 
 def get_product(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -523,7 +523,7 @@ def get_product(database = 'cafe_app'):
         return ValueError
 
 def get_total_cost(order_id, database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -559,7 +559,7 @@ def get_total_cost(order_id, database = 'cafe_app'):
     return order_total_cost
 
 def insert_products_into_order(order_id, database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
     cursor = connection.cursor()
 
     try:
@@ -616,7 +616,7 @@ def insert_products_into_order(order_id, database = 'cafe_app'):
         return ValueError
 
 def insert_into_orders(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     try:
         cursor = connection.cursor()
@@ -683,7 +683,7 @@ def insert_into_orders(database = 'cafe_app'):
         return ValueError
 
 def update_product(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -743,7 +743,7 @@ def update_product(database = 'cafe_app'):
     connection.close()
 
 def update_courier(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -791,7 +791,7 @@ def update_courier(database = 'cafe_app'):
     connection.close()
 
 def update_customer(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -852,7 +852,7 @@ def update_customer(database = 'cafe_app'):
     connection.close()
 
 def update_order(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -934,7 +934,7 @@ def update_order(database = 'cafe_app'):
     connection.close()
 
 def delete_product(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -962,7 +962,7 @@ def delete_product(database = 'cafe_app'):
     connection.close()
 
 def delete_courier(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -990,7 +990,7 @@ def delete_courier(database = 'cafe_app'):
     connection.close()
 
 def delete_customer(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -1018,7 +1018,7 @@ def delete_customer(database = 'cafe_app'):
     connection.close()
 
 def cancel_order(database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 
@@ -1048,7 +1048,7 @@ def cancel_order(database = 'cafe_app'):
     connection.close()
 
 def restock(order_id, database = 'cafe_app'):
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
 
     cursor = connection.cursor()
 

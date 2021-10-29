@@ -126,7 +126,7 @@ password = 'password'
 
 def import_products_from_csv(products_filename = 'data/database_products.csv', database = 'cafe_app'):
     '''Function that imports products from a csv file into a database.'''
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
     if Path(products_filename).exists() == False:
         with open(products_filename, 'w', newline = '') as product_file:
             field_names = ['product_id','product_name', 'product_price', 'product_stock', 'is_deleted']
@@ -155,7 +155,7 @@ def import_products_from_csv(products_filename = 'data/database_products.csv', d
 
 def import_couriers_from_csv(couriers_filename = 'data/database_couriers.csv', database = 'cafe_app'):
     '''Function that imports couriers from a csv file into a database.'''
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
     if Path(couriers_filename).exists() == False:
         with open(couriers_filename, 'w+', newline = '') as courier_file:
             field_names = ['courier_id', 'courier_name', 'courier_phone', 'is_deleted']
@@ -184,7 +184,7 @@ def import_couriers_from_csv(couriers_filename = 'data/database_couriers.csv', d
 
 def import_customers_from_csv(customers_filename = 'data/database_customers.csv', database = 'cafe_app'):
     '''Function that imports customers from a csv file into a database.'''
-    connection = mysql.connect(host, user, password, database)
+    connection = mysql.connect(host = host, user = user, password = password, database = database)
     if Path(customers_filename).exists() == False:
         with open(customers_filename, 'w+', newline = '') as customer_file:
             field_names = ['customer_id', 'customer_name', 'customer_address', 'customer_phone', 'is_deleted']
